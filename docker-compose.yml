@@ -1,0 +1,12 @@
+version: '2.2'
+
+services:
+  iot:
+    build:
+      context: ./dockers/
+      dockerfile: Dockerfile.iot
+    environment:
+      TEST_URL: http://yourwebsite.com
+      TZ: "America/Montreal"
+    volumes:
+    - ./IoT:/app/run
